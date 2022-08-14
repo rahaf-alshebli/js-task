@@ -1127,17 +1127,16 @@ function showFirstAndLast(string){
     function showFirstAndLast(arr){
         var newArr = [];
         var str = "";
-         arr.forEach(function(val){
+arr.forEach(function(val){
             for(var i = 0; i < val.length; i++){
                 if (i === 0 || (i === val.length-1)) {
                     str += val[i];
                 }
             }
         newArr.push(str);
-        str = "";
-      });
-      
-      return newArr;
+        str = "";});
+
+return newArr;
     }
     
     
@@ -1186,17 +1185,42 @@ addKeyAndValue([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 
 *
 */
 
-
 function vowelCount(str){
-var vowel = ["a", "e", "i", "o", "u"];
-var arr = [];
-var obj = {};
-var count = 0;
+var vowels =['a','e','i','o','u'];
+let count = {};
+for (let i = 0; i < str.length; i++) {
+switch(true){
 
-for(var i = 0; i < str.length; i++){
-for(var h = 0; h < vowel.length; h++){
-if(vowel[h] === str[i].toLowerCase()){
-arr.push(vowel[h]);
-}}}}
+case str[i] == 'a' || str[i] =='A':
+count.a= count.a?count.a+=1:1;
+break;
+case str[i] == 'e' || str[i] =='E':
+count.e= count.e?count.e+=1:1;
+break;
+case str[i] == 'i' || str[i] =='I':
+count.i= count.i?count.i+=1:1;
+break;
+case str[i] == 'o' || str[i] =='O':
+count.o= count.o?count.o+=1:1;
+break;
+case str[i] == 'u' || str[i] =='U':
+count.u= count.u?count.u+=1:1;
+break;
+}
 
-consle.log(vowelCount('Elie'));
+}
+console.log(count);
+
+}
+vowelCount('Elie');
+
+
+
+
+
+
+
+
+
+
+
